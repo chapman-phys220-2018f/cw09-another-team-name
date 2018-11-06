@@ -63,7 +63,7 @@ def derivative(func, n=100):
     Returns:
         1D numpy array - an array of the function func evaluted at n domain points
     """
-    x = np.linspace(0, n-1, n, endpoint=True)
-    f = np.vectorize(func)
-    Df = gradient(x) @ f(x)
-    return Df
+    x = np.linspace(0, n-1, n, endpoint=True) # domain
+    f = np.vectorize(func) # vectorize our function
+    Df = gradient(x) @ f(x) # matrix multiplication of the gradient(x) and the f(x), our vectorized function
+    return Df # a 1D array of each derivative of our function evaluated at each domain point
