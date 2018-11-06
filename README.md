@@ -2,7 +2,7 @@
 
 # PHYS220/MATH220/CPSC220 CW 9
 
-**Author(s):** **Jacob Anabi, **
+**Author(s):** **Jacob Anabi,**
 
 ## Specification
 
@@ -42,4 +42,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**Jacob Anabi, **
+**Jacob Anabi,**
