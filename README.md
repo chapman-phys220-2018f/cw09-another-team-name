@@ -2,7 +2,7 @@
 
 # PHYS220/MATH220/CPSC220 CW 9
 
-**Author(s):** **Jacob Anabi,**
+**Author(s):** **Jacob Anabi, Grady Lynch**
 
 ## Specification
 
@@ -31,7 +31,7 @@ The lowest-order error is second-order in $h$, since the first-order error cance
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have. You can use the GitHub web interface to edit this file directly for now.
 
-**CHANGEME**
+**This assignment pushed our problem solving skills by coding some useful, and fun, problems. Also familiarized ourselves with numpy matrix operations.**
 
 ## Honor Pledge
 
@@ -42,4 +42,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**Jacob Anabi,**
+**Jacob Anabi, Grady Lynch**
