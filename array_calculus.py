@@ -25,6 +25,7 @@ Central finite difference: (f_i+1 - f_i-1)/2dx
 """
 
 import numpy as np
+from matplotlib import pyplot as plt
 
 def gradient(x):
     """
@@ -67,3 +68,13 @@ def derivative(func, n=100):
     f = np.vectorize(func) # vectorize our function
     Df = gradient(x) @ f(x) # matrix multiplication of the gradient(x) and the f(x), our vectorized function
     return Df # a 1D array of each derivative of our function evaluated at each domain point
+
+def plot(x, y, xlabel="", ylabel=""):
+    # Plotting
+    fig = plt.figure(figsize=(8,6)) # Setting funciton figure size (width, height)
+    axes = plt.axes() # Creating function plot axes
+
+    axes.plot(x, y, label=ylabel) # plotting graph
+    axes.legend() # axes legend
+    axes.xlabel(xlabel) # x-axis label for graph
+    axes.ylable(ylabel) # y-axis label for graph
