@@ -57,6 +57,8 @@ def derivative(func, n=100):
     """
     derivative(func, n=100) function description:
 
+    computes the derivative of some function func for n domain points
+
     Args:
         func - the function to compute the derivative of
         n - the number of domain points (defaults to 100)
@@ -70,6 +72,17 @@ def derivative(func, n=100):
     return Df # a 1D array of each derivative of our function evaluated at each domain point
 
 def plot(x, y, xlabel="", ylabel=""):
+    """
+    plot(x, y, xlabel="", ylabel="") function description:
+
+    plots a function given a domain and range
+
+    Args:
+        x - the domain of values
+        y - the range of values
+        xlabel - the label of the x-axis (defaults to "")
+        ylabel - the label of the y-axis (defaults to "")
+    """
     # Plotting
     fig = plt.figure(figsize=(8,6)) # Setting funciton figure size (width, height)
     axes = plt.axes() # Creating function plot axes
