@@ -71,7 +71,7 @@ def derivative(func, n=100):
     Df = gradient(x) @ f(x) # matrix multiplication of the gradient(x) and the f(x), our vectorized function
     return Df # a 1D array of each derivative of our function evaluated at each domain point
 
-def plot(x, y, xlabel="", ylabel=""):
+def plot(x, y, xlabel="", ylabel="", title=""):
     """
     plot(x, y, xlabel="", ylabel="") function description:
 
@@ -89,5 +89,8 @@ def plot(x, y, xlabel="", ylabel=""):
 
     axes.plot(x, y, label=ylabel) # plotting graph
     axes.legend() # axes legend
-    axes.xlabel(xlabel) # x-axis label for graph
-    axes.ylable(ylabel) # y-axis label for graph
+    plt.xlabel(xlabel) # x-axis label for graph
+    plt.ylable(ylabel) # y-axis label for graph
+    plt.title(title) # the title of the graph
+
+    plt.show() # show the graph
