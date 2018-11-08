@@ -53,23 +53,24 @@ def gradient(x):
     D = np.diag(main_diag, k=0) + np.diag(pos_diag, k=1) + np.diag(neg_diag, k=-1) # our gradient matrix, D, which is of the form [[-2, 2, ..., 0][-1, 0, 1, ..., 0], ..., [0, ..., -2, 2]]
     return D/(2*dx) # multipling our matrix by the scalar 1/(2*dx)
 
-def derivative(func, n=100):
+def derivative(func, xmax=100, n=100, power=1):
     """
     derivative(func, n=100) function description:
 
-    computes the derivative of some function func for n domain points
+    computes the the derivative to some power of some function func for n domain points
 
     Args:
         func - the function to compute the derivative of
         n - the number of domain points (defaults to 100)
+        power - the power to compute the derivative to (defaults to 1) (ex. power = 2 => 2nd derivative)
 
     Returns:
         1D numpy array - an array of the function func evaluted at n domain points
     """
-    x = np.linspace(0, n-1, n, endpoint=True) # domain
+    x = np.linspace(0, xmax, n, endpoint=True) # domain
     f = np.vectorize(func) # vectorize our function
-    Df = gradient(x) @ f(x) # matrix multiplication of the gradient(x) and the f(x), our vectorized function
-    return Df # a 1D array of each derivative of our function evaluated at each domain point
+    Df = np.linalg.matrix_power(gradient(x), power) @ f(x) # matrix multiplication of the gradient(x) to some power and the f(x), our vectorized function
+    return Df # a 1D array of each derivative of our function evaluated at each domain point to some power
 
 def plot(x, y, xlabel="", ylabel="", title=""):
     """
@@ -90,7 +91,7 @@ def plot(x, y, xlabel="", ylabel="", title=""):
     axes.plot(x, y, label=ylabel) # plotting graph
     axes.legend() # axes legend
     plt.xlabel(xlabel) # x-axis label for graph
-    plt.ylable(ylabel) # y-axis label for graph
+    plt.ylabel(ylabel) # y-axis label for graph
     plt.title(title) # the title of the graph
 
     plt.show() # show the graph

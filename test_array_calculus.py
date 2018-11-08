@@ -17,6 +17,6 @@ def test_derivative():
     Tests whether the central finite difference is close to the derivative of the function
     """
     f = lambda x: x**2
-    Df = ac.derivative(f)
+    Df = ac.derivative(f, xmax=99)
     for i in range (1, len(Df)-1):
         assert math.isclose(Df[i], 2*i)
