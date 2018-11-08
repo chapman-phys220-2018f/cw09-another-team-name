@@ -12,8 +12,9 @@ import array_calculus as ac
 
 def test_derivative():
     """
-    Tests whether the central finite difference
-    is close to the derivative of the function
+    test_derivative function description:
+
+    Tests whether the central finite difference is close to the derivative of the function
     """
     f = lambda x: x**2
     Df = ac.derivative(f)
